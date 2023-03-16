@@ -54,7 +54,9 @@ export default {};
 }
 .RecommendDownCard {
   top: 580px;
-  left: 350px;
+  /* left: 350px; */
+  left: 50%;
+  transform: translateX(-50%);
   width: 368px;
   height: 150px;
   background-color: #ffffff;
@@ -63,7 +65,9 @@ export default {};
 }
 .RecommendUpCard {
   top: 580px;
-  left: 500px;
+  /* left: 500px; */
+  left: 50%;
+  transform: translateX(-50%);
   width: 368px;
   height: 150px;
   background-color: #ffffff;
@@ -81,11 +85,34 @@ export default {};
     width: 100%;
   }
   .RecommendUpCard {
-    left: 15px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 670px;
   }
   .RecommendDownCard {
-    left: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 670px;
+  }
+}
+@media (min-width: 500px) {
+  .RecommendImages {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  .RecommendBg {
+    height: 1700px;
+    width: 100%;
+  }
+  .RecommendUpCard {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 670px;
+  }
+  .RecommendDownCard {
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 670px;
   }
 }
@@ -100,11 +127,13 @@ export default {};
     width: 100%;
   }
   .RecommendUpCard {
-    left: 180px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 670px;
   }
   .RecommendDownCard {
-    left: 180px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 670px;
   }
 }
@@ -119,11 +148,13 @@ export default {};
     width: 100%;
   }
   .RecommendUpCard {
-    left: 60px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 670px;
   }
   .RecommendDownCard {
-    left: 60px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 670px;
   }
 }
@@ -138,11 +169,13 @@ export default {};
     width: 100%;
   }
   .RecommendUpCard {
-    left: 110px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 670px;
   }
   .RecommendDownCard {
-    left: 110px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 670px;
   }
 }
@@ -157,11 +190,13 @@ export default {};
     width: 100%;
   }
   .RecommendUpCard {
-    left: 155px;
+    left: 68%;
+    transform: translateX(-50%);
     bottom: 670px;
   }
   .RecommendDownCard {
-    left: 155px;
+    left: 68%;
+    transform: translateX(-50%);
     bottom: 670px;
   }
 }

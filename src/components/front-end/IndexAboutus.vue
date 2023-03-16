@@ -10,7 +10,8 @@
           </li>
           <li class="mt-2">
             <p>
-              晨曦的陽光淌進窗戶，向你送出我的祝福，打開手機查看，溫馨，一點點爬上你的笑臉，你是快樂的，我就是幸福的，早安！與你相遇，在 Cedar Brunch & Cafe。
+              晨曦的陽光淌進窗戶，向你送出我的祝福，打開手機查看，溫馨，一點點爬上你的笑臉，你是快樂的，我就是幸福的，早安！與你相遇，在
+              Cedar Brunch & Cafe。
             </p>
           </li>
           <li class="mt-5">
@@ -23,11 +24,7 @@
         </ul>
       </div>
       <div class="col-lg-6 position-relative">
-        <img
-          src="/images/Index_AboutUs_001.jpg"
-          alt="關於我們"
-          class="img-fluid rounded-3"
-        />
+        <img src="/images/Index_AboutUs_001.jpg" alt="關於我們" class="img-fluid rounded-3" />
         <div
           class="rounded-3"
           style="
@@ -62,11 +59,7 @@
         </ul>
       </div>
       <div class="col-lg-6 position-relative">
-        <img
-          src="/images/Index_AboutUs_002.jpg"
-          alt="關於我們"
-          class="img-fluid rounded-3"
-        />
+        <img src="/images/Index_AboutUs_002.jpg" alt="關於我們" class="img-fluid rounded-3" />
         <div
           class="rounded-3"
           style="
@@ -75,7 +68,7 @@
             width: 94%;
             height: 100%;
             top: -20px;
-            right: 0px;
+            right: -8px;
             background: rgba(116, 125, 84, 0.8);
             z-index: -1;
           "
@@ -101,11 +94,7 @@
         </ul>
       </div>
       <div class="col-lg-6 position-relative">
-        <img
-          src="/images/Index_AboutUs_003.jpg"
-          alt="關於我們"
-          class="img-fluid rounded-3"
-        />
+        <img src="/images/Index_AboutUs_003.jpg" alt="關於我們" class="img-fluid rounded-3" />
         <div
           class="rounded-3"
           style="
@@ -114,7 +103,7 @@
             width: 94%;
             height: 100%;
             top: -20px;
-            right: 0px;
+            right: -8px;
             background: rgba(116, 125, 84, 0.8);
             z-index: -1;
           "
