@@ -27,43 +27,43 @@
 </template>
 
 <script>
-const { VITE_API, VITE_PATH } = import.meta.env;
+// const { VITE_API, VITE_PATH } = import.meta.env;
 
 export default {
   data() {
     return {
-      order: {
-        products: [],
-        user: {},
-      },
+      // order: {
+      //   products: [],
+      //   user: {},
+      // },
     };
   },
   methods: {
-    getOrder() {
-      this.$http
-        .get(`${VITE_API}api/${VITE_PATH}/order/${this.orderId}`)
-        .then((res) => {
-          const { order } = res.data;
-          this.order = order;
-        })
-        .catch(() => {
-          // const errMessage = err.response?.data?.message || '資料錯誤';
-        });
-    },
-    payOrder() {
-      this.$http
-        .post(`${VITE_API}api/${VITE_PATH}/pay/${this.orderId}`)
-        .then(() => {
-          this.getOrder();
-        })
-        .catch(() => {
-          // const errMessage = err.response?.data?.message || '資料錯誤';
-        });
-    },
+    // getOrder() {
+    //   this.$http
+    //     .get(`${VITE_API}api/${VITE_PATH}/order/${this.orderId}`)
+    //     .then((res) => {
+    //       const { order } = res.data;
+    //       this.order = order;
+    //     })
+    //     .catch(() => {
+    //       // const errMessage = err.response?.data?.message || '資料錯誤';
+    //     });
+    // },
+    // payOrder() {
+    //   this.$http
+    //     .post(`${VITE_API}api/${VITE_PATH}/pay/${this.orderId}`)
+    //     .then(() => {
+    //       this.getOrder();
+    //     })
+    //     .catch(() => {
+    //       // const errMessage = err.response?.data?.message || '資料錯誤';
+    //     });
+    // },
   },
-  mounted() {
-    this.orderId = this.$route.params.orderId;
-    this.getOrder();
-  },
+  // mounted() {
+  //   this.orderId = this.$route.params.orderId;
+  //   this.getOrder();
+  // },
 };
 </script>

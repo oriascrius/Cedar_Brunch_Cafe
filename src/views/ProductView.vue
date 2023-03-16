@@ -87,7 +87,7 @@
                 :style="{ backgroundImage: `url(${productItem.imageUrl})` }"
                 @click.prevent="toggleId(productItem.id)"
               >
-                <div class="overlay"></div>
+                <div class="overlay"><div class="btn text-custom_red fs-4 fw-bold">查看更多</div></div>
               </div>
               <div class="card-body">
                 <h6 class="card-title">
@@ -145,8 +145,6 @@ export default {
         .get(`${VITE_API}api/${VITE_PATH}/product/${this.id}`)
         .then((res) => {
           this.product = res.data.product;
-          // const { product } = res.data;
-          // this.product = product;
           this.getCategoryProducts();
           this.hideLoading();
         })
@@ -206,11 +204,16 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* 半遮蓋陰影的顏色和透明度 */
+  background-color: rgba(0, 0, 0, 0.3); /* 半遮蓋陰影的顏色和透明度 */
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
-
+.overlay .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .swiper-slide:hover .overlay {
   opacity: 1;
 }

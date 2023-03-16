@@ -88,10 +88,7 @@
           </div>
           <router-link to="/orderSuccess">
             <div class="text-end mt-4">
-              <button
-                type="button"
-                class="btn btn-custom_btn-color text-white"
-              >確認付款</button>
+              <button type="button" class="btn btn-custom_btn-color text-white">確認付款</button>
             </div>
           </router-link>
         </form>
@@ -120,8 +117,16 @@ export default {
           const { order } = res.data;
           this.order = order;
         })
-        .catch(() => {
-          // const errMessage = err.response?.data?.message || '資料錯誤';
+        .catch((err) => {
+          const errMessage = err.response?.data?.message || '資料錯誤';
+          this.$swal.fire({
+            toast: true,
+            position: 'top',
+            icon: 'error',
+            title: `${errMessage}`,
+            showConfirmButton: false,
+            timer: 1500,
+          });
         });
     },
     payOrder() {
@@ -130,8 +135,16 @@ export default {
         .then(() => {
           this.getOrder();
         })
-        .catch(() => {
-          // const errMessage = err.response?.data?.message || '資料錯誤';
+        .catch((err) => {
+          const errMessage = err.response?.data?.message || '資料錯誤';
+          this.$swal.fire({
+            toast: true,
+            position: 'top',
+            icon: 'error',
+            title: `${errMessage}`,
+            showConfirmButton: false,
+            timer: 1500,
+          });
         });
     },
   },

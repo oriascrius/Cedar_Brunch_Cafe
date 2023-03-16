@@ -64,15 +64,15 @@
           <h3 class="h4 fw-bold mb-4">訂單細節</h3>
           <table class="table text-custom_medium-green border-bottom">
             <tbody>
-              <tr>
+              <!-- <tr>
                 <th scope="row" class="border-0 px-0 pt-4 font-weight-normal">總計</th>
                 <td class="text-end border-0 px-0 pt-4">NT$ {{ cart.total }}</td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
           <div class="d-flex justify-content-between mt-4">
-            <p class="mb-0 h4 fw-bold">折扣價</p>
-            <p class="mb-0 h4 fw-bold">NT$ {{ cart.final_total }}</p>
+            <p class="mb-0 h4 fw-bold">小計</p>
+            <p class="mb-0 h4 fw-bold">NT$ {{ cart.total }}</p>
           </div>
           <router-link to="/orderForm"
             ><button type="button" class="btn btn-custom_btn-color text-white w-100 mt-4">

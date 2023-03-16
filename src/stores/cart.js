@@ -158,7 +158,6 @@ const cartStore = defineStore('cart', {
             showConfirmButton: false,
             timer: 1500,
           });
-          // const errMessage = err.response?.data?.message || '資料錯誤';
         });
     },
   },
