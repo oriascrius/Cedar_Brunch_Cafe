@@ -1,18 +1,19 @@
 <template>
   <div
     class="mt-7"
+    :style="{ backgroundImage: `url(${SubscribeBanner})` }"
     style="
-      height: 378px;
-      width: 100%;
-      background-image: url(./images/Subscribe_Banner.jpg);
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: left center;
       background-size: cover;
+      max-width: 100%;
+      height: 378px;
     "
   >
     <div class="container">
       <div class="row">
         <div
+          data-aos="fade-up"
           class="col-lg-5 offset-lg-7 mt-7 text-custom_btn-color"
           style="
             height: 210px;
@@ -59,9 +60,12 @@
 </template>
 
 <script>
+import SubscribeBanner from '@/assets/images/Subscribe_Banner.jpg';
+
 export default {
   data() {
     return {
+      SubscribeBanner,
       email: '',
     };
   },
@@ -73,11 +77,13 @@ export default {
           icon: 'success',
           title: '訂閱成功',
           text: '優惠碼: avocado666',
+          confirmButtonColor: '#9CA57C',
         });
       } else {
         this.$swal.fire({
           icon: 'error',
           title: '請輸入正確的信箱',
+          confirmButtonColor: '#9CA57C',
         });
       }
       this.email = '';

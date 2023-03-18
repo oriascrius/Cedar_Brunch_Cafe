@@ -19,11 +19,11 @@ const cartStore = defineStore('cart', {
     ...mapActions(LoadingStore, ['showLoading', 'hideLoading']),
     // 取得購物車列表
     getCarts() {
+      this.showLoading();
       // 這裡不屬於vue，所以需要另外 import axios，不能使用 this 需使用 axios
       axios
         .get(`${VITE_API}api/${VITE_PATH}/cart`)
         .then((res) => {
-          this.showLoading();
           this.cart = res.data.data;
           this.hideLoading();
         })
@@ -33,6 +33,7 @@ const cartStore = defineStore('cart', {
         });
     },
     addToCart(product_id, qty = 1) {
+      this.showLoading();
       const data = {
         product_id,
         qty,
@@ -40,6 +41,7 @@ const cartStore = defineStore('cart', {
       axios
         .post(`${VITE_API}api/${VITE_PATH}/cart`, { data })
         .then(() => {
+          this.hideLoading();
           Swal.fire({
             toast: true,
             position: 'top',
@@ -51,6 +53,7 @@ const cartStore = defineStore('cart', {
           this.getCarts();
         })
         .catch((err) => {
+          this.hideLoading();
           alert(err.response.data.message);
         });
     },

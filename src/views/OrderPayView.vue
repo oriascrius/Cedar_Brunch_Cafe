@@ -27,7 +27,7 @@
                       </div>
                       <div class="d-flex justify-content-between">
                         <p class="mb-0">地址</p>
-                        <p>{{ order.user.address }}</p>
+                        <p class="">{{ order.user.address }}</p>
                       </div>
                       <div class="d-flex justify-content-between">
                         <p class="mb-0">付款狀態</p>
@@ -80,7 +80,7 @@
                 <li class="list-group-item px-0 pb-0 text-custom_medium-green">
                   <div class="d-flex justify-content-between mt-2">
                     <p class="mb-0 h4">總計</p>
-                    <p class="mb-0 h4">NT$ {{ order.total }}</p>
+                    <p class="mb-0 h4">NT$ {{ Math.floor(order.total) }}</p>
                   </div>
                 </li>
               </ul>

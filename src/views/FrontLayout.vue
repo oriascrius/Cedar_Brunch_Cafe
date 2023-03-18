@@ -35,9 +35,6 @@ export default {
   methods: {
     ...mapActions(cartStore, ['getCarts', 'addToCart']),
   },
-  mounted() {
-    this.getCarts();
-  },
 };
 </script>
 

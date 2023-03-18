@@ -9,6 +9,7 @@
       </div>
     </div>
     <swiper
+      data-aos="fade-up"
       :slidesPerView="3"
       :spaceBetween="20"
       :loop="true"

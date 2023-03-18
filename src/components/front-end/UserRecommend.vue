@@ -6,10 +6,10 @@
           <h4 class="h5 fw-bold text-center">MENU</h4>
           <h2 class="h3 fw-bold text-center">松柏主打推薦</h2>
         </div>
-        <div class="col-lg-6 col-md-12 position-relative">
+        <div class="col-lg-6 col-md-12 position-relative" data-aos="fade-up">
           <img
-            src="/images/HotMenu_001.jpg"
-            alt="關於我們"
+            :src="`${HotMenu001}`"
+            alt="主打推薦"
             class="img-fluid rounded-3 RecommendImages"
             style="height: 648px; width: 100%"
           />
@@ -21,10 +21,10 @@
             </router-link>
           </div>
         </div>
-        <div class="col-lg-6 col-md-12 position-relative">
+        <div class="col-lg-6 col-md-12 position-relative" data-aos="fade-up">
           <img
-            src="/images/HotMenu_002.jpg"
-            alt="關於我們"
+             :src="`${HotMenu002}`"
+            alt="主打推薦"
             class="img-fluid rounded-3 RecommendImages"
             style="height: 648px; width: 100%"
           />
@@ -44,7 +44,17 @@
 </template>
 
 <script>
-export default {};
+import HotMenu001 from '@/assets/images/HotMenu_001.jpg';
+import HotMenu002 from '@/assets/images/HotMenu_002.jpg';
+
+export default {
+  data() {
+    return {
+      HotMenu001,
+      HotMenu002,
+    };
+  },
+};
 </script>
 
 <style scoped>

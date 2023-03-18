@@ -60,8 +60,10 @@ const routes = [
     path: '/admin/:pathMatch(.*)*',
     redirect: { name: 'Login' },
   },
+  // 網址錯誤時，導向自訂義 404 ErrorView 畫面
+  { path: '/:catchAll(.*)', redirect: '/not-found' },
   {
-    path: '/:pathMatch(.*)*',
+    path: '/not-found',
     component: () => import('../views/ErrorView.vue'),
   },
   {

@@ -8,22 +8,29 @@
         @click="scrollToTop"
         aria-label="scroll to top of the page"
       >
+        <!--  src="/images/Top_Btn.png" -->
         <img
-          src="/images/Top_Btn.png"
+          :src="`${TopBtn}`"
           alt="回到頂端按鈕"
-          style="width: 50px; background-color: transparent;"
+          style="width: 50px; background-color: transparent"
         />
       </button>
     </transition>
   </div>
 </template>
-<script lang="ts">
+<script>
 import {
   defineComponent, ref, onMounted, onBeforeUnmount,
 } from 'vue';
+import TopBtn from '@/assets/images/Top_Btn.png';
 
 export default defineComponent({
   name: 'BackToTop',
+  data() {
+    return {
+      TopBtn,
+    };
+  },
   setup() {
     const isVisible = ref(false);
     const handleScroll = () => {

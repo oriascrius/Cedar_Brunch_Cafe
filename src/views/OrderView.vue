@@ -2,7 +2,7 @@
   <div class="container text-custom_medium-green">
     <div class="row" v-if="cart.carts?.length">
       <h3 class="mt-3 h4 fw-bold">購物車清單</h3>
-      <div class="col-md-8 mt-3">
+      <div class="col-md-8 mt-3" data-aos="fade-up">
         <table class="table text-custom_medium-green">
           <thead>
             <tr>
@@ -59,20 +59,15 @@
           </tbody>
         </table>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up">
         <div class="border p-4 mb-4">
           <h3 class="h4 fw-bold mb-4">訂單細節</h3>
           <table class="table text-custom_medium-green border-bottom">
-            <tbody>
-              <!-- <tr>
-                <th scope="row" class="border-0 px-0 pt-4 font-weight-normal">總計</th>
-                <td class="text-end border-0 px-0 pt-4">NT$ {{ cart.total }}</td>
-              </tr> -->
-            </tbody>
+            <tbody></tbody>
           </table>
           <div class="d-flex justify-content-between mt-4">
             <p class="mb-0 h4 fw-bold">小計</p>
-            <p class="mb-0 h4 fw-bold">NT$ {{ cart.total }}</p>
+            <p class="mb-0 h4 fw-bold">NT$ {{ Math.floor(cart.total) }}</p>
           </div>
           <router-link to="/orderForm"
             ><button type="button" class="btn btn-custom_btn-color text-white w-100 mt-4">
@@ -93,8 +88,10 @@
         </div>
       </div>
     </div>
-    <div v-else class="row text-center">
-      <h4 class="text-custom_medium-green">購物車目前空空如也～趕緊將喜歡的餐點加入其中吧！</h4>
+    <div v-else class="row text-center" data-aos="fade-up">
+      <h4 class="text-custom_medium-green mt-7">
+        購物車目前空空如也～趕緊將喜歡的餐點加入其中吧！
+      </h4>
       <router-link to="/products" class="">
         <button class="mt-4 btn btn-custom_btn-color text-white w-25">前往選購</button>
       </router-link>

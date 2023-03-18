@@ -18,48 +18,42 @@
     <div class="container text-custom_medium-green">
       <div class="mt-4">
         <!-- 商品列表 -->
-        <div>
-          <div class="row">
-            <div
-              class="col-md-4 g-4"
-              v-for="productsItem in productsFiltered"
-              :key="productsItem.id"
-            >
-              <div class="card rounded-3 productsList">
-                <router-link :to="`/product/${productsItem.id}`">
-                  <img
-                    :src="productsItem.imageUrl"
-                    class="card-img-top rounded-3"
-                    :alt="productsItem.title"
-                    width="200"
-                    height="300"
-                  />
-                </router-link>
-                <div class="card-body">
-                  <div>
-                    <h5 class="card-title">
-                      {{ productsItem.title }}
-                      <span class="badge bg-custom_medium-green rounded-pill fs-8">{{
-                        productsItem.category
-                      }}</span>
-                    </h5>
-                  </div>
-                  <p class="card-text">NT$ {{ productsItem.price }}</p>
+        <div class="row">
+          <div class="col-md-4 g-4" v-for="productsItem in productsFiltered" :key="productsItem.id">
+            <div class="card rounded-3 productsList">
+              <router-link :to="`/product/${productsItem.id}`">
+                <img
+                  :src="productsItem.imageUrl"
+                  class="card-img-top rounded-3"
+                  :alt="productsItem.title"
+                  width="200"
+                  height="300"
+                />
+              </router-link>
+              <div class="card-body">
+                <div>
+                  <h5 class="card-title">
+                    {{ productsItem.title }}
+                    <span class="badge bg-custom_medium-green rounded-pill fs-8">{{
+                      productsItem.category
+                    }}</span>
+                  </h5>
                 </div>
-                <div class="card-footer text-center">
-                  <router-link :to="`/product/${productsItem.id}`"
-                    ><button type="button" class="btn btn-outline-secondary mx-4">
-                      查看更多
-                    </button></router-link
-                  >
-                  <button
-                    type="button"
-                    class="btn btn-outline-custom_dark-green mx-4"
-                    @click="addToCart(productsItem.id)"
-                  >
-                    加入商品
-                  </button>
-                </div>
+                <p class="card-text">NT$ {{ productsItem.price }}</p>
+              </div>
+              <div class="card-footer text-center">
+                <router-link :to="`/product/${productsItem.id}`"
+                  ><button type="button" class="btn btn-outline-secondary mx-4">
+                    查看更多
+                  </button></router-link
+                >
+                <button
+                  type="button"
+                  class="btn btn-outline-custom_dark-green mx-4"
+                  @click="addToCart(productsItem.id)"
+                >
+                  加入商品
+                </button>
               </div>
             </div>
           </div>
@@ -150,10 +144,17 @@ export default {
 </script>
 
 <style scoped>
+/* 單一商品 */
 .productsList {
   transition: transform 0.2s ease;
 }
 .productsList:hover {
-   transform: translateY(-5px)
+  transform: translateY(-5px);
+}
+.nav-tabs .nav-link.active {
+  color: #FE7264;
+}
+.breadcrumb-item.active {
+  color: #89af0c;
 }
 </style>

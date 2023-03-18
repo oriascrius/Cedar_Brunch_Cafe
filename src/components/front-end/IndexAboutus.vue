@@ -24,7 +24,8 @@
         </ul>
       </div>
       <div class="col-lg-6 position-relative">
-        <img src="/images/Index_AboutUs_001.jpg" alt="關於我們" class="img-fluid rounded-3" />
+        <!-- <img src="/images/Index_AboutUs_001.jpg" alt="關於我們" class="img-fluid rounded-3" /> -->
+        <img  :src="`${IndexAboutUs001}`" alt="關於我們" class="img-fluid rounded-3" />
         <div
           class="rounded-3"
           style="
@@ -59,7 +60,8 @@
         </ul>
       </div>
       <div class="col-lg-6 position-relative">
-        <img src="/images/Index_AboutUs_002.jpg" alt="關於我們" class="img-fluid rounded-3" />
+        <!-- <img src="/images/Index_AboutUs_002.jpg" alt="關於我們" class="img-fluid rounded-3" /> -->
+         <img  :src="`${IndexAboutUs002}`" alt="關於我們" class="img-fluid rounded-3" />
         <div
           class="rounded-3"
           style="
@@ -81,7 +83,7 @@
           <li class="py-5">
             <p>
               我們在這裡尋找咖啡和烹飪愛好者。我們希望 Cedar Brunch & Cafe 成為
-              您的歸宿，您可以在這裡為自己充電，並在咖啡、美食和熟悉的面孔中尋 求安慰。
+              您的歸宿，您可以在這裡為自己充電，並在咖啡、美食和熟悉的面孔中尋求安慰。
             </p>
           </li>
           <li>
@@ -94,7 +96,8 @@
         </ul>
       </div>
       <div class="col-lg-6 position-relative">
-        <img src="/images/Index_AboutUs_003.jpg" alt="關於我們" class="img-fluid rounded-3" />
+        <!-- <img src="/images/Index_AboutUs_003.jpg" alt="關於我們" class="img-fluid rounded-3" /> -->
+         <img  :src="`${IndexAboutUs003}`" alt="關於我們" class="img-fluid rounded-3" />
         <div
           class="rounded-3"
           style="
@@ -114,5 +117,17 @@
 </template>
 
 <script>
-export default {};
+import IndexAboutUs001 from '@/assets/images/Index_AboutUs_001.jpg';
+import IndexAboutUs002 from '@/assets/images/Index_AboutUs_002.jpg';
+import IndexAboutUs003 from '@/assets/images/Index_AboutUs_003.jpg';
+
+export default {
+  data() {
+    return {
+      IndexAboutUs001,
+      IndexAboutUs002,
+      IndexAboutUs003,
+    };
+  },
+};
 </script>

@@ -7,7 +7,7 @@
         <h5 class="mt-7 fw-bold text-center">FAQ</h5>
         <h1 class="h2 fw-bold text-center">常見問題</h1>
         <hr class="mt-4" />
-        <div class="accordion mt-5" id="accordionExample">
+        <div class="accordion mt-5" id="accordionExample" data-aos="fade-down">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
               <button
@@ -18,17 +18,18 @@
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                特別的節日或活動時會有不同的營業時間嗎？
+                Ｑ1.「 CEDAR 」能刷卡消費嗎？
               </button>
             </h2>
             <div
               id="collapseOne"
-              class="accordion-collapse collapse show fs-7"
+              class="accordion-collapse collapse show"
               aria-labelledby="headingOne"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body text-custom_medium-green">
-                在特別節日或活動期間，我們可能會有不同的營業時間，請隨時關注我們的官方網站、FB、Line以獲取最新資訊。
+              <div class="accordion-body text-custom_medium-green fw-bold">
+                店內消費可以使用現金、LINE Pay、街口支付。<br />
+                線上訂購可以使用刷卡服務唷。
               </div>
             </div>
           </div>
@@ -42,7 +43,7 @@
                 aria-expanded="false"
                 aria-controls="collapseTwo"
               >
-                有提供外送服務嗎？
+                Ｑ2.「 CEDAR 」能帶寵物去用餐嗎？
               </button>
             </h2>
             <div
@@ -51,8 +52,8 @@
               aria-labelledby="headingTwo"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body text-custom_medium-green">
-                我們沒有外送服務喔。<br />但您可以先下訂餐點，我們會準備餐點，等待您來領取。
+              <div class="accordion-body text-custom_medium-green fw-bold">
+                我們是寵物友善餐廳，歡迎帶寵物一起過來用餐唷。
               </div>
             </div>
           </div>
@@ -66,7 +67,7 @@
                 aria-expanded="false"
                 aria-controls="collapseThree"
               >
-                你們菜單會更換嗎？
+                Ｑ3.「 CEDAR 」附近有停車場嗎？
               </button>
             </h2>
             <div
@@ -75,9 +76,8 @@
               aria-labelledby="headingThree"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body text-custom_medium-green">
-                目前菜單固定不會更改。
-                但我們會不時地推出活動，有特別的餐點推出，請隨時關注我們的官方網站、FB、Line以獲取最新資訊。
+              <div class="accordion-body text-custom_medium-green fw-bold">
+                因為我們位於淡水老街後方，所以可以停在淡水捷運站以及附近的立體停車場唷。
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@
                 aria-expanded="false"
                 aria-controls="collapseFour"
               >
-                你們的食材有採用有機或當地的農產品嗎？
+                Ｑ4.「 CEDAR 」可以訂位嗎？
               </button>
             </h2>
             <div
@@ -100,19 +100,96 @@
               aria-labelledby="headingFour"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body text-custom_medium-green">
-                我們非常重視食材的品質和來源，因此我們會採用當地和有機的農產品作為我們的食材。<br />我們也會根據季節性的變化調整我們的菜單，以確保客人品嚐到最新鮮、最好的食材。
+              <div class="accordion-body text-custom_medium-green fw-bold">
+                請幫我們提前來電: +886 2 1234 1234。<br />
+                先詢問現場人員訂位狀況，或是到我們的LINE、FB進行留言，我們會再給予回覆，謝謝您。
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button collapsed text-custom_medium-green fs-5"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive"
+              >
+                Ｑ5.「 CEDAR 」的營業時間？
+              </button>
+            </h2>
+            <div
+              id="collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body text-custom_medium-green fw-bold">
+                我們營業時間：<br />星期六、星期日 09:00 AM - 17:00 PM <br />星期一 ~ 星期五 08:00
+                AM - 16:00 PM
+                <br />如有特殊節日、活動，我們會在官方網站、LINE、FB公告營業狀況以及時間唷。
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button
+                class="accordion-button collapsed text-custom_medium-green fs-5"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseSix"
+                aria-expanded="false"
+                aria-controls="collapseSix"
+              >
+                Ｑ6.「 CEDAR 」可以外送嗎？
+              </button>
+            </h2>
+            <div
+              id="collapseSix"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingSix"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body text-custom_medium-green fw-bold">
+                我們目前沒有外送唷，但能在這裡直接下訂餐點，或是撥打我們電話、聯繫LINE、FB，我們將會處理您的餐點唷。
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button
+                class="accordion-button collapsed text-custom_medium-green fs-5"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven"
+                aria-expanded="false"
+                aria-controls="collapseSeven"
+              >
+                Ｑ7.「 CEDAR 」會更換菜單嗎？
+              </button>
+            </h2>
+            <div
+              id="collapseSeven"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingSeven"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body text-custom_medium-green fw-bold">
+                我們菜單會一年更改一次，提供不同選擇。<br />
+                我們也會不時地推出活動，有特別的餐點推出，請隨時關注我們的官方網站、FB、LINE以獲取最新資訊。
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="mt-7">
+    <div class="mt-7 py-2">
       <h4 class="h5 fw-bold">DISHES</h4>
       <h2 class="h3 fw-bold">熱門餐點</h2>
     </div>
     <swiper
+    data-aos="fade-up"
       :slidesPerView="3"
       :spaceBetween="20"
       :loop="true"

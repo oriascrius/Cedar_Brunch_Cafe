@@ -1,31 +1,68 @@
 <template>
   <div class="container text-custom_medium-green">
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        <nav class="navbar navbar-expand-lg navbar-light px-0">
-          <ul
-            class="list-unstyled mb-0 ms-md-auto d-flex align-items-center
-            justify-content-between justify-content-md-end w-100 mt-md-0 mt-4"
-          >
-            <li class="me-md-6 me-3 position-relative custom-step-line">
-              <i class="fas fa-check-circle d-md-inline d-block text-center"></i>
-              <span class="text-nowrap">購物車</span>
+    <!-- <h3 class="py-3 h4 fw-bold">訂購表單</h3> -->
+    <div class="row pb-5 flex-row-reverse">
+      <div class="col-lg-6 mt-7">
+        <div class="border border-custom_medium-green p-4 mb-4">
+          <div class="d-flex py-2" v-for="cartItem in cart.carts" :key="cartItem.id">
+            <img
+              :src="cartItem.product.imageUrl"
+              :alt="cartItem.total"
+              class="me-2"
+              style="width: 48px; height: 48px; object-fit: cover"
+            />
+            <div class="w-100">
+              <div class="d-flex justify-content-between">
+                <p class="mb-0 fw-bold">{{ cartItem.product.title }}</p>
+                <p class="mb-0">NT$ {{ cartItem.total }}</p>
+              </div>
+              <p class="mb-0 fw-bold">x{{ cartItem.qty }}</p>
+            </div>
+          </div>
+          <table class="table mt-4 p-2 border-top border-bottom">
+            <tbody>
+              <tr class="text-custom_medium-green">
+                <th scope="row" class="border-0 px-0 pt-4">小計</th>
+                <td class="text-end border-0 px-0 pt-4">NT$ {{ cart.total }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="list-unstyled mt-4">
+            <li class="input-group w-100">
+              <input
+                type="text"
+                class="form-control"
+                v-model="couponCode"
+                placeholder="輸入優惠碼可獲得折扣唷"
+              />
+              <div class="input-group-append">
+                <button
+                  class="btn btn-outline-dark"
+                  type="button"
+                  @click="addCouponCode(couponCode)"
+                >
+                  <i class="bi bi-gift"></i>
+                </button>
+              </div>
             </li>
-            <li class="me-md-6 me-3 position-relative custom-step-line">
-              <i class="fas fa-check-circle d-md-inline d-block text-center"></i>
-              <span class="text-nowrap">表單確認</span>
-            </li>
-            <li>
-              <i class="fas fa-dot-circle d-md-inline d-block text-center"> </i>
-              <span class="text-nowrap">訂購成功</span>
-            </li>
+            <table class="table mt-4 p-2">
+              <tbody>
+                <tr v-if="messages.data?.final_total" class="text-custom_medium-green">
+                  <th scope="row" class="border-0 px-0 pt-4 h4">總計</th>
+                  <td class="text-end border-0 px-0 pt-4">
+                    NT$ {{ Math.floor(messages.data?.final_total) }}
+                  </td>
+                  <!-- <td v-else class="text-end border-0 px-0 pt-4">
+                    NT$ {{ Math.floor(messages.data?.final_total) }}
+                  </td> -->
+                </tr>
+              </tbody>
+            </table>
           </ul>
-        </nav>
+        </div>
       </div>
-    </div>
-    <h3 class="py-3 h4 fw-bold">訂購表單</h3>
-    <div class="row pb-5 g-6">
-      <Form ref="form" class="col-md-6" v-slot="{ errors }" @submit="sendOrder">
+      <Form ref="form" class="col-lg-6" v-slot="{ errors }" @submit="sendOrder">
+        <h3 class="py-3 h4 fw-bold">訂購表單</h3>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
           <Field
@@ -110,66 +147,6 @@
           </div>
         </div>
       </Form>
-
-      <div class="col-md-6">
-        <div class="border border-custom_medium-green p-4 mb-4">
-          <div class="d-flex py-2" v-for="cartItem in cart.carts" :key="cartItem.id">
-            <img
-              :src="cartItem.product.imageUrl"
-              :alt="cartItem.total"
-              class="me-2"
-              style="width: 48px; height: 48px; object-fit: cover"
-            />
-            <div class="w-100">
-              <div class="d-flex justify-content-between">
-                <p class="mb-0 fw-bold">{{ cartItem.product.title }}</p>
-                <p class="mb-0">NT$ {{ cartItem.total }}</p>
-              </div>
-              <p class="mb-0 fw-bold">x{{ cartItem.qty }}</p>
-            </div>
-          </div>
-          <table class="table mt-4 p-2 border-top border-bottom">
-            <tbody>
-              <tr class="text-custom_medium-green">
-                <th scope="row" class="border-0 px-0 pt-4">小計</th>
-                <td class="text-end border-0 px-0 pt-4">NT$ {{ cart.total }}</td>
-              </tr>
-            </tbody>
-          </table>
-          <ul class="list-unstyled mt-4">
-            <li class="input-group w-100">
-              <input
-                type="text"
-                class="form-control"
-                v-model="couponCode"
-                placeholder="輸入優惠碼可獲得折扣唷"
-              />
-              <div class="input-group-append">
-                <button
-                  class="btn btn-outline-dark"
-                  type="button"
-                  @click="addCouponCode(couponCode)"
-                >
-                  <i class="bi bi-gift"></i>
-                </button>
-              </div>
-            </li>
-            <table class="table mt-4 p-2">
-              <tbody>
-                <tr v-if="messages.data?.final_total" class="text-custom_medium-green">
-                  <th scope="row" class="border-0 px-0 pt-4 h4">總計</th>
-                  <td class="text-end border-0 px-0 pt-4">
-                    NT$ {{ Math.floor(messages.data?.final_total) }}
-                  </td>
-                  <!-- <td v-else class="text-end border-0 px-0 pt-4">
-                    NT$ {{ Math.floor(messages.data?.final_total) }}
-                  </td> -->
-                </tr>
-              </tbody>
-            </table>
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -248,3 +225,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.btn-outline-dark {
+  --bs-btn-hover-bg: #89af0c;
+}
+</style>

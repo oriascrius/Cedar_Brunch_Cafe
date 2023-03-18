@@ -55,9 +55,10 @@
     <hr />
     <!-- 相似商品 -->
     <template v-if="similarProducts.length">
-      <h3 class="mt-7">類似商品</h3>
-      <div>
+      <h3 class="mt-7">您可能會喜歡</h3>
+      <div class="mt-3">
         <swiper
+          data-aos="fade-up"
           :slidesPerView="1"
           :spaceBetween="10"
           :navigation="navigation"
@@ -87,7 +88,9 @@
                 :style="{ backgroundImage: `url(${productItem.imageUrl})` }"
                 @click.prevent="toggleId(productItem.id)"
               >
-                <div class="overlay"><div class="btn text-custom_red fs-4 fw-bold">查看更多</div></div>
+                <div class="overlay">
+                  <div class="btn text-custom_red fs-4 fw-bold">查看更多</div>
+                </div>
               </div>
               <div class="card-body">
                 <h6 class="card-title">
