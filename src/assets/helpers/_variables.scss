@@ -1333,11 +1333,16 @@ $accordion-button-active-bg: tint-color($component-active-bg, 90%) !default;
 $accordion-button-active-color: shade-color($primary, 10%) !default;
 
 $accordion-button-focus-border-color: $input-focus-border-color !default;
+
 $accordion-button-focus-box-shadow: $btn-focus-box-shadow !default;
 
 $accordion-icon-width: 1.25rem !default;
-$accordion-icon-color: $accordion-button-color !default;
-$accordion-icon-active-color: $accordion-button-active-color !default;
+// 自訂 開合箭頭按鈕顏色
+// $accordion-icon-color: $accordion-button-color !default;
+$accordion-icon-color: $custom_btn-color !default;
+// $accordion-icon-active-color: $accordion-button-active-color !default;
+$accordion-icon-active-color: $custom_btn-color !default;
+
 $accordion-icon-transition: transform 0.2s ease-in-out !default;
 $accordion-icon-transform: rotate(-180deg) !default;
 

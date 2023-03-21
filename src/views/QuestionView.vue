@@ -189,7 +189,7 @@
       <h2 class="h3 fw-bold">熱門餐點</h2>
     </div>
     <swiper
-    data-aos="fade-up"
+      data-aos="fade-up"
       :slidesPerView="3"
       :spaceBetween="20"
       :loop="true"
@@ -301,5 +301,9 @@ export default {
 }
 .mySwiper img:hover {
   transform: scale(1.2, 1.2);
+}
+.accordion {
+  --bs-accordion-bg: #fef5f2;
+  --bs-accordion-border-color: #c7d2a4;
 }
 </style>

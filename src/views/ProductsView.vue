@@ -152,9 +152,6 @@ export default {
   transform: translateY(-5px);
 }
 .nav-tabs .nav-link.active {
-  color: #FE7264;
-}
-.breadcrumb-item.active {
-  color: #89af0c;
+  color: #747D54;
 }
 </style>

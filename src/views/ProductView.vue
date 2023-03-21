@@ -89,7 +89,7 @@
                 @click.prevent="toggleId(productItem.id)"
               >
                 <div class="overlay">
-                  <div class="btn text-custom_red fs-4 fw-bold">查看更多</div>
+                  <div class="btn text-custom_background fs-4 fw-bold">查看更多</div>
                 </div>
               </div>
               <div class="card-body">
