@@ -17,5 +17,3 @@ npm run dev
 ```
 npm run build
 ```
-"# Vite_week6" 
-"# Vite_week6" 
