@@ -38,7 +38,7 @@ export default {
             this.checkSuccess = true;
           })
           .catch((err) => {
-            alert(err.response.data.message);
+            alert(err.response.data);
             this.$router.push('/login');
           });
       } else {
