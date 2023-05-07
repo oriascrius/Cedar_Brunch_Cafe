@@ -72,7 +72,6 @@
         </ul>
       </div>
       <div class="col-lg-6 position-relative">
-        <!-- <img src="/images/About_002.jpg" alt="關於我們" class="img-fluid rounded-3" /> -->
         <img :src="`${About002}`" alt="關於我們" class="img-fluid rounded-3" />
         <div
           class="rounded-3"
@@ -107,7 +106,6 @@
         </ul>
       </div>
       <div class="col-lg-6 position-relative">
-        <!-- <img src="/images/About_003.jpg" alt="關於我們" class="img-fluid rounded-3" /> -->
         <img :src="`${About003}`" alt="關於我們" class="img-fluid rounded-3" />
         <div
           class="rounded-3"

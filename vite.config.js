@@ -11,7 +11,8 @@ export default defineConfig({
       include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue'],
     }),
   ],
-  base: '/Vite_CEDAR/',
+  // base: '/Vite_CEDAR/',
+  base: process.env.NODE_ENV === 'production' ? '/Vite_CEDAR/' : '/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
